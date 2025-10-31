@@ -22,9 +22,7 @@ repositories {
     maven {
         url 'https://maven.egovframe.go.kr/maven'
     }
-    flatDir {
-        dirs 'libs'
-    }
+    flatDir { dirs 'libs' }
 }
  
 dependencies {
@@ -33,10 +31,12 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-validation'
     developmentOnly 'org.springframework.boot:spring-boot-devtools'
 
-
 //     Tomcat (JBoss에 배포 시 provided)
-//    implementation 'org.springframework.boot:spring-boot-starter-tomcat'
-    providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat'
+    implementation 'org.springframework.boot:spring-boot-starter-tomcat'
+//    providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat'
+
+    implementation 'org.springframework.boot:spring-boot-starter-jdbc'
+    implementation files('libs/tibero6-jdbc.jar')
 
     // lombok
     compileOnly 'org.projectlombok:lombok'
@@ -46,6 +46,9 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
     implementation 'org.hsqldb:hsqldb:2.7.3:jdk8'
     implementation 'org.hibernate:hibernate-entitymanager:5.6.15.Final'
+
+    // SSH 터널링
+    implementation 'com.jcraft:jsch:0.1.55'
 
     // EL (Expression Language) - WAR 배포 시 필요
     providedRuntime 'org.glassfish:jakarta.el:3.0.4'

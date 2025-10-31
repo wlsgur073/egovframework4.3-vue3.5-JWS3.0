@@ -28,7 +28,7 @@ public class EgovConfigIdGeneration {
 		egovTableIdGnrServiceImpl.setBlockSize(10);
 		egovTableIdGnrServiceImpl.setTable("IDS");
 		egovTableIdGnrServiceImpl.setTableName("SAMPLE");
-		return egovTableIdGnrServiceImpl;	
+		return egovTableIdGnrServiceImpl;
 	}
 
 }

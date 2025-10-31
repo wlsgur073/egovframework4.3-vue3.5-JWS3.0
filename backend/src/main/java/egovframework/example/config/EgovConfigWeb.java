@@ -27,11 +27,11 @@ import java.util.Properties;
 @Import({
 		EgovConfigAspect.class,
 		EgovConfigCommon.class,
-		EgovConfigDatasource.class,
+//		EgovConfigDatasource.class,
 		EgovConfigIdGeneration.class,
 		EgovConfigMapper.class,
 		EgovConfigProperties.class,
-		EgovConfigTransaction.class,
+//		EgovConfigTransaction.class,
 		EgovConfigValidation.class,
 		WebConfig.class
 })
